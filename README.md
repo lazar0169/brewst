@@ -50,7 +50,7 @@ A beautiful and intuitive TUI (Terminal User Interface) application for managing
 Requires Go 1.21 or later:
 
 ```bash
-go install github.com/lazar/brewst@latest
+go install github.com/lazar0169/brewst@latest
 ```
 
 ### Pre-built Binaries
@@ -58,7 +58,7 @@ Download the latest release from [GitHub Releases](https://github.com/lazar0169/
 
 ### Build from Source
 ```bash
-git clone https://github.com/lazar/brewst.git
+git clone https://github.com/lazar0169/brewst.git
 cd brewst
 go build -o brewst
 ./brewst
@@ -132,7 +132,7 @@ Favorite packages are saved to `~/.config/brewst/favorites.json` and persist acr
 ### Setup
 ```bash
 # Clone the repository
-git clone https://github.com/lazar/brewst.git
+git clone https://github.com/lazar0169/brewst.git
 cd brewst
 
 # Install dependencies
