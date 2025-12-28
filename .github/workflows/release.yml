@@ -1,0 +1,54 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Get version
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Build binaries
+        run: |
+          # Build for macOS Intel
+          GOOS=darwin GOARCH=amd64 go build -ldflags="-s -w" -o brewst-darwin-amd64
+          
+          # Build for macOS Apple Silicon
+          GOOS=darwin GOARCH=arm64 go build -ldflags="-s -w" -o brewst-darwin-arm64
+          
+          # Create archives
+          tar -czf brewst-${{ steps.get_version.outputs.VERSION }}-darwin-amd64.tar.gz brewst-darwin-amd64
+          tar -czf brewst-${{ steps.get_version.outputs.VERSION }}-darwin-arm64.tar.gz brewst-darwin-arm64
+          
+          # Generate checksums
+          shasum -a 256 brewst-${{ steps.get_version.outputs.VERSION }}-*.tar.gz > checksums.txt
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            brewst-${{ steps.get_version.outputs.VERSION }}-darwin-amd64.tar.gz
+            brewst-${{ steps.get_version.outputs.VERSION }}-darwin-arm64.tar.gz
+            checksums.txt
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
