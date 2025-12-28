@@ -54,7 +54,7 @@ go install github.com/lazar/brewst@latest
 ```
 
 ### Pre-built Binaries
-Download the latest release from [GitHub Releases](https://github.com/lazar/brewst/releases).
+Download the latest release from [GitHub Releases](https://github.com/lazar0169/brewst/releases).
 
 ### Build from Source
 ```bash
