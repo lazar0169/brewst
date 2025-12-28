@@ -53,6 +53,14 @@ Requires Go 1.21 or later:
 go install github.com/lazar0169/brewst@latest
 ```
 
+Make sure `$(go env GOPATH)/bin` is in your PATH. Add this to your `~/.zshrc` or `~/.bash_profile`:
+
+```bash
+export PATH="$PATH:$(go env GOPATH)/bin"
+```
+
+Then reload your shell with `source ~/.zshrc` and run `brewst`.
+
 ### Pre-built Binaries
 Download the latest release from [GitHub Releases](https://github.com/lazar0169/brewst/releases).
 
