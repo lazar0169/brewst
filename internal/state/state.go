@@ -3,7 +3,7 @@ package state
 import (
 	"sync"
 
-	"github.com/lazar/brewst/internal/brew"
+	"github.com/lazar0169/brewst/internal/brew"
 )
 
 // State represents the global application state

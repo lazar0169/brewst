@@ -12,10 +12,10 @@ import (
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/lazar/brewst/internal/brew"
-	"github.com/lazar/brewst/internal/state"
-	"github.com/lazar/brewst/internal/ui/components"
-	"github.com/lazar/brewst/internal/ui/styles"
+	"github.com/lazar0169/brewst/internal/brew"
+	"github.com/lazar0169/brewst/internal/state"
+	"github.com/lazar0169/brewst/internal/ui/components"
+	"github.com/lazar0169/brewst/internal/ui/styles"
 )
 
 // PanelType represents which panel is focused

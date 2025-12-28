@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/charmbracelet/lipgloss"
-	"github.com/lazar/brewst/internal/ui/styles"
+	"github.com/lazar0169/brewst/internal/ui/styles"
 )
 
 // StatusBar represents the application status bar

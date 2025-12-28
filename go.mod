@@ -1,4 +1,4 @@
-module github.com/lazar/brewst
+module github.com/lazar0169/brewst
 
 go 1.25.3
 

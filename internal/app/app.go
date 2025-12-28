@@ -7,11 +7,11 @@ import (
 	"github.com/charmbracelet/bubbles/spinner"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/lazar/brewst/internal/brew"
-	"github.com/lazar/brewst/internal/state"
-	"github.com/lazar/brewst/internal/ui/components"
-	"github.com/lazar/brewst/internal/ui/styles"
-	"github.com/lazar/brewst/internal/ui/views"
+	"github.com/lazar0169/brewst/internal/brew"
+	"github.com/lazar0169/brewst/internal/state"
+	"github.com/lazar0169/brewst/internal/ui/components"
+	"github.com/lazar0169/brewst/internal/ui/styles"
+	"github.com/lazar0169/brewst/internal/ui/views"
 )
 
 // ViewType represents the different views in the application

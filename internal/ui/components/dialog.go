@@ -4,7 +4,7 @@ import (
 	"github.com/charmbracelet/bubbles/key"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/lazar/brewst/internal/ui/styles"
+	"github.com/lazar0169/brewst/internal/ui/styles"
 )
 
 // DialogType represents the type of dialog
